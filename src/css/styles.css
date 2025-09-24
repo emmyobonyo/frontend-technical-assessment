@@ -37,10 +37,92 @@ hr {
 
 /* === Base (Mobile First) === */
 
+/* Navigation Section */
+
+#nav-section {
+  height: 100vh;
+  padding-top: 80px;
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: 10px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+}
+
+.hamburger img {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-title,
+.nav-description {
+  text-align: center;
+}
+
+.nav-content {
+  text-align: center;
+  border: 1px solid var(--border-color);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.nav-list {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-list.open {
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+}
+
+/* Drag & Drop Section */
 #drag-section {
   width: 80%;
-  margin: 0 auto;
+  margin: 0px auto;
   height: 100vh;
+  padding-top: 80px;
 }
 
 .drag-drop-title {
@@ -101,13 +183,14 @@ hr {
   border-color: var(--border-color);
 }
 
+/* Blog Section */
+
 #list-section {
   width: 90%;
   margin: 40px auto;
   border-radius: 5px;
+  padding-top: 80px;
 }
-
-/* Blog Section */
 
 .blog-list-content {
   display: grid;
@@ -181,6 +264,18 @@ input {
 /* == Medium Screens == */
 
 @media (min-width: 768px) {
+  /* Navigation */
+
+  .nav-list {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-toggle {
+    display: none; /* hide hamburger */
+  }
   /* Drag and Drop Section */
 
   .drop-zones {
