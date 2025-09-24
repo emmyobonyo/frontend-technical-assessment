@@ -1,4 +1,3 @@
-/* Base Variables */
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -7,14 +6,12 @@
   --border-color: #dddddd;
   --spacing: 16px;
 
-  /* Breakpoint Variables */
   --mobile: 480px;
   --tablet: 768px;
   --desktop: 1024px;
   --large-desktop: 1200px;
 }
 
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -27,91 +24,12 @@ body {
   color: var(--text-color);
 }
 
-/* Base Styles */
 .container {
   width: 100%;
   max-width: var(--large-desktop);
   margin: 0 auto;
   padding: 0 var(--spacing);
 }
-
-/* Navigation Component - Responsive Requirements:
- * Mobile (< 480px):
- * - Stack navigation items vertically
- * - Show hamburger menu
- * - Hide nav-list by default
- * - Add slide-in animation for menu
- *
- * Tablet (768px - 1023px):
- * - Show navigation items in a row
- * - Remove hamburger menu
- * - Adjust padding and spacing
- *
- * Desktop (≥ 1024px):
- * - Enhanced hover states
- * - Sticky navigation
- */
-
-/* Drag & Drop Component - Responsive Requirements:
-
- * Desktop (≥ 1024px):
- * - Side-by-side layout
- * - Hover effects
- * - Drag previews
- */
-
-/* Blog List Component - Responsive Requirements:
-
- * Tablet (768px - 1023px):
- * - 2 column grid
- * - Responsive images
- * - Show/hide certain metadata
- *
- * Desktop (≥ 1024px):
- * - 3 column grid
- * - Hover states
- * - Enhanced animations
- */
-
-/* Content Sections - Responsive Requirements:
- * Mobile (< 480px):
- * - Full-width sections
- * - Increased text size
- * - Stack all content
- *
- * Tablet (768px - 1023px):
- * - Balanced padding
- * - 2-column where appropriate
- *
- * Desktop (≥ 1024px):
- * - Max-width container
- * - Enhanced spacing
- */
-
-/* TODO: Implement Components */
-
-/* Navigation
-.nav {}
-.nav-list {}
-.nav-link {}
-.nav-toggle {}
-*/
-
-/* Drag & Drop
-.drag-drop-container {}
-.draggable-list {}
-.draggable-item {}
-.drag-handle {}
-.drop-zones {}
-.drop-zone {}
-*/
-
-/* Utility Classes
-.loading {}
-.error {}
-.active {}
-.dragging {}
-*/
 
 hr {
   border: 1px solid var(--secondary-color);
@@ -213,7 +131,7 @@ hr {
 }
 
 .blog-meta {
-  font-size: 0.8rem; /* compact view */
+  font-size: 0.8rem;
   display: flex;
   font-style: italic;
   margin: 10px 0;
@@ -259,6 +177,8 @@ input {
   text-align: center;
   margin-bottom: 20px;
 }
+
+/* == Medium Screens == */
 
 @media (min-width: 768px) {
   /* Drag and Drop Section */
